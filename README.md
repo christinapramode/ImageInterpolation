@@ -34,11 +34,16 @@ Codes for reading raw images -
 - https://stackoverflow.com/questions/29760779/reproduce-raw-image-c 
 - https://stackoverflow.com/questions/26416702/how-can-i-read-a-raw-image-in-c-without-special-libreries
 
-
-
 ## Step 2 - Running the Code on Ti CCS
 
 Before running the code in CCS, **profiling** is added to measure the time taken for running the "interpImg" function. 
 The header file "<c6x.h>" is included and the 64 bit TSC register (timer) is initialised before calling "interpImg", and ended afterwards. "sumcycles" stores the total cycles taken. 
 
 #### Refer to "ImageInterpCCS.txt" for the full code
+
+## Step 3 - Further Optimization of the Code on Ti CCS
+
+For further optimization, we use **intrinsics functions** to perform SIMD (Single Instruction Multiple Data) operations in the function definition to compute the values of the extra output pixels.
+
+
+
