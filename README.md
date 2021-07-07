@@ -1,3 +1,4 @@
+![Picture1](https://user-images.githubusercontent.com/59883696/124708658-323d0100-df18-11eb-8322-fb676056cc69.png)
 # Image Interpolation in C
 
 This project involves developing an algorithm to carry out image interpolation in C, and running the code in a DSP Processor simulator using Texas Instruments' Code Composer Studio.
