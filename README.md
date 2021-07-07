@@ -23,12 +23,10 @@ The code should fill in the extra output pixels by interpolating using the formu
 #### References:
 
 For more information regarding the basics of images & image processing - 
-
-https://visualresources.princeton.edu/making-images/digital-image-basics/ 
+- https://visualresources.princeton.edu/making-images/digital-image-basics/ 
   
 For more information regarding image interpolation - 
-
-https://www.cambridgeincolour.com/tutorials/image-interpolation.htm
+- https://www.cambridgeincolour.com/tutorials/image-interpolation.htm
 
 Codes for reading raw images -
 - https://stackoverflow.com/questions/29760779/reproduce-raw-image-c 
@@ -36,14 +34,17 @@ Codes for reading raw images -
 
 ## Step 2 - Running the Code on Ti CCS
 
-Before running the code in CCS, **profiling** is added to measure the time taken for running the "interpImg" function. 
+Before running the code in CCS, ***profiling*** is added to measure the time taken for running the "interpImg" function. 
 The header file "<c6x.h>" is included and the 64 bit TSC register (timer) is initialised before calling "interpImg", and ended afterwards. "sumcycles" stores the total cycles taken. 
 
 #### Refer to "ImageInterpCCS.txt" for the full code
 
 ## Step 3 - Further Optimization of the Code on Ti CCS
 
-For further optimization, we use **intrinsics functions** to perform SIMD (Single Instruction Multiple Data) operations in the function definition to compute the values of the extra output pixels.
+For further optimization, we use ***intrinsics functions*** to perform SIMD (Single Instruction Multiple Data) operations in the function definition to compute the values of the extra output pixels.
 
+Texas Instruments' TMS320C6000 Programmer's Guide - 
+- https://www.ti.com/lit/ug/spru198k/spru198k.pdf
 
+#### Refer to "ImageInterpOptimized.txt" for the full code
 
