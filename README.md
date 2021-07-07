@@ -2,6 +2,8 @@
 
 This project involves developing an algorithm to carry out image interpolation in C, and running the code in a DSP Processor simulator using Texas Instruments' Code Composer Studio.
 
+![Picture1](https://user-images.githubusercontent.com/59883696/124708529-06ba1680-df18-11eb-8919-465f4121bf26.png)
+
 ## Step 1 - Developing the C code
 
 ### Problem Statement:
@@ -26,8 +28,8 @@ https://www.cambridgeincolour.com/tutorials/image-interpolation.htm
 #### Refer to "ImageInterp.txt" for the full code.
 
 Sources used for code for reading raw images -
-https://stackoverflow.com/questions/29760779/reproduce-raw-image-c 
-https://stackoverflow.com/questions/26416702/how-can-i-read-a-raw-image-in-c-without-special-libreries
+- https://stackoverflow.com/questions/29760779/reproduce-raw-image-c 
+- https://stackoverflow.com/questions/26416702/how-can-i-read-a-raw-image-in-c-without-special-libreries
 
 
 ## Step 2 - Running the Code on Ti CCS
