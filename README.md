@@ -35,7 +35,7 @@ Codes for reading raw images -
 ## Step 2 - Running the Code on Ti CCS
 
 Before running the code in CCS, ***profiling*** is added to measure the time taken for running the "interpImg" function. 
-The header file "<c6x.h>" is included and the 64 bit TSC register (timer) is initialised before calling "interpImg", and ended afterwards. "sumcycles" stores the total cycles taken. 
+The header file "<c6x.h>" is included and the 64 bit TSC register (timer) is initialized before calling "interpImg", and ended afterwards. "sumcycles" stores the total cycles taken. 
 
 #### Refer to "ImageInterpCCS.txt" for the full code
 
@@ -43,7 +43,7 @@ The header file "<c6x.h>" is included and the 64 bit TSC register (timer) is ini
 
 For further optimization, we use ***intrinsics functions*** to perform SIMD (Single Instruction Multiple Data) operations in the function definition to compute the values of the extra output pixels.
 
-Details on C66x intrinsics are avaliable at Texas Instruments' TMS320C6000 Programmer's Guide - 
+Details on C66x intrinsics are available at Texas Instruments' TMS320C6000 Programmer's Guide - 
 - https://www.ti.com/lit/ug/spru198k/spru198k.pdf
 
 #### Refer to "ImageInterpOptimized.txt" for the full code
