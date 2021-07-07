@@ -43,7 +43,7 @@ The header file "<c6x.h>" is included and the 64 bit TSC register (timer) is ini
 
 For further optimization, we use ***intrinsics functions*** to perform SIMD (Single Instruction Multiple Data) operations in the function definition to compute the values of the extra output pixels.
 
-Texas Instruments' TMS320C6000 Programmer's Guide - 
+Details on C66x Intrinsics are avaliable at Texas Instruments' TMS320C6000 Programmer's Guide - 
 - https://www.ti.com/lit/ug/spru198k/spru198k.pdf
 
 #### Refer to "ImageInterpOptimized.txt" for the full code
