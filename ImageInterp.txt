@@ -1,0 +1,70 @@
+ /*
+  * Image Interpolation Code in C by ChristinaAnnPramode
+  */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void interpImg(unsigned char* input, int width, int height, unsigned char* interpOut);
+
+int main()
+{
+    FILE* fin, * fout;
+    unsigned char* rev, * revout, px;
+    int height, width, iread, row, i;
+
+    width = 256, height = 256;
+
+    // Opening the input and output files
+    fin = fopen("Image1_256x256.raw", "rb");
+    if (fin == NULL) {
+        perror("Failed: ");
+        return 1;
+    }
+    fout = fopen("Image1_512x256.raw", "wb");
+
+    // Memory Allocation for input & output image arrays
+    rev = malloc(width * sizeof(unsigned char));
+    revout = malloc(2 * width * sizeof(unsigned char));
+
+    for (row = 0; row < height; row++)
+    {
+        // Reading from the input image 256x256
+        for (i = 0; i < width; i++)
+        {
+            iread = fread(&px, sizeof(unsigned char), 1, fin);
+            rev[i] = px;
+        }
+
+        // Calling the function interpImg
+        interpImg(rev, width, height, revout);
+
+        // Writing to the output image 512x256
+        for (i = 0; i < 2 * width; i++)
+            if (i < 2 * width && row < height)
+                fwrite(&revout[i], sizeof(unsigned char), 1, fout);
+
+    }
+
+    fclose(fout);
+    fclose(fin);
+    return 0;
+}
+
+void interpImg(unsigned char* input, int width, int height, unsigned char* interpOut)
+{
+    int i, j, x;
+    j = 0;
+    while (j < width) {
+        for (i = 0; i < 2 * width; i++) {
+            if (i % 2 == 0) {
+                interpOut[i] = input[j];
+                j++;
+            }
+            if (i % 2 != 0) {
+                x = (input[j] + input[j - 1] + 1) / 2;
+                interpOut[i] = x;  
+            }
+        }
+    }
+}
