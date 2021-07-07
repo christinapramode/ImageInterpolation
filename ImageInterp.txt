@@ -1,5 +1,6 @@
  /*
-  * Image Interpolation Code in C by ChristinaAnnPramode
+  * Image Interpolation Code in C
+  * By Christina Ann Pramode
   */
 
 #include <stdio.h>
