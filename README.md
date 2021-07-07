@@ -2,7 +2,7 @@
 
 This project involves developing an algorithm to carry out image interpolation in C, running and optimizing the code in a DSP Processor simulator using Texas Instruments' Code Composer Studio.
 
-![Picture1](https://user-images.githubusercontent.com/59883696/124708529-06ba1680-df18-11eb-8919-465f4121bf26.png)
+<img src="https://user-images.githubusercontent.com/59883696/124708529-06ba1680-df18-11eb-8919-465f4121bf26.png" width="703" height="248">
 
 ## Step 1 - Developing the C code
 
@@ -43,8 +43,16 @@ The header file "<c6x.h>" is included and the 64 bit TSC register (timer) is ini
 
 For further optimization, we use ***intrinsics functions*** to perform SIMD (Single Instruction Multiple Data) operations in the function definition to compute the values of the extra output pixels.
 
-Details on C66x Intrinsics are avaliable at Texas Instruments' TMS320C6000 Programmer's Guide - 
+Details on C66x intrinsics are avaliable at Texas Instruments' TMS320C6000 Programmer's Guide - 
 - https://www.ti.com/lit/ug/spru198k/spru198k.pdf
 
 #### Refer to "ImageInterpOptimized.txt" for the full code
 
+### Optimization Cycles:
+
+<img src="https://user-images.githubusercontent.com/59883696/124746472-865adc00-df3e-11eb-9250-7f4a2ae95fc3.png" width="468" height="214">
+
+#### Note: 
+The values for optimization levels 0, 1, 2, 3 were obtained by changing the levels in the CCS IDE properties window. (Code used - "ImageInterpCCS.txt")
+
+The value for optimization level 4 was obtained by selecting level 3 in the CCS IDE properties window and using the code - "ImageInterpOptimized.txt", i.e. the code using the intrinsics function.
