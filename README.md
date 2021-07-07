@@ -23,18 +23,22 @@ The code should fill in the extra output pixels by interpolating using the formu
 #### References:
 
 For more information regarding the basics of images & image processing - 
+
 https://visualresources.princeton.edu/making-images/digital-image-basics/ 
   
 For more information regarding image interpolation - 
+
 https://www.cambridgeincolour.com/tutorials/image-interpolation.htm
 
 Codes for reading raw images -
 - https://stackoverflow.com/questions/29760779/reproduce-raw-image-c 
 - https://stackoverflow.com/questions/26416702/how-can-i-read-a-raw-image-in-c-without-special-libreries
 
+
+
 ## Step 2 - Running the Code on Ti CCS
 
-Before running the code in CCS, *profiling* is added to measure the time taken for running the "interpImg" function. 
-The header file "<c6x.h>" is included in the existing code and the 64 bit TSC register (timer) is initialised before calling "interpImg", and ended afterwards. "sumcycles" stores the total cycles taken. 
+Before running the code in CCS, **profiling** is added to measure the time taken for running the "interpImg" function. 
+The header file "<c6x.h>" is included and the 64 bit TSC register (timer) is initialised before calling "interpImg", and ended afterwards. "sumcycles" stores the total cycles taken. 
 
 #### Refer to "ImageInterpCCS.txt" for the full code
