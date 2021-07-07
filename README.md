@@ -56,3 +56,5 @@ Details on C66x intrinsics are available at Texas Instruments' TMS320C6000 Progr
 The values for optimization levels 0, 1, 2, 3 were obtained by changing the levels in the CCS IDE properties window. (Code used - "ImageInterpCCS.txt")
 
 The value for optimization level 4 was obtained by selecting level 3 in the CCS IDE properties window and using the code - "ImageInterpOptimized.txt", i.e. the code using the intrinsics function.
+
+For clarifications, contact me at <christinapramode@gmail.com>
