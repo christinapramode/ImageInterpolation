@@ -63,9 +63,9 @@ Details on C66x intrinsics are available at Texas Instruments' TMS320C6000 Progr
 <img src="https://user-images.githubusercontent.com/59883696/124746472-865adc00-df3e-11eb-9250-7f4a2ae95fc3.png" width="468" height="214">
 
 #### Note: 
-The values for optimization levels 0, 1, 2, 3 were obtained by changing the levels in the CCS IDE properties window. (Code used - "ImageInterpCCS.txt")
+The values for optimization levels 0, 1, 2, 3 were obtained by changing the levels in the CCS IDE properties window. (Code used - "ImageInterpCCS.c")
 
-The value for optimization level 4 was obtained by selecting level 3 in the CCS IDE properties window and using the code - "ImageInterpOptimized.txt", i.e. the code using the intrinsics function.
+The value for optimization level 4 was obtained by selecting level 3 in the CCS IDE properties window and using the code - "ImageInterpOptimized.c", i.e. the code using the intrinsics function.
 
 DSP Simulator details - Device Family: "C6000" , Variant: "Generic C66xx Device", Target Configuration: "C6678 Device Cycle Approximate Simulator", "Little Endian"
 
