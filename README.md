@@ -16,11 +16,11 @@ The code should fill in the extra output pixels by interpolating using the formu
 #### The code involves the following steps: 
 1. Creating/opening the input ("Image1_256x256.raw") and output files ("Image1_512x256.raw").
 2. Reading from the input file (row by row), and storing the pixel data in a pointer array "rev".
-3. A function "interpImg", which carries out the interpolation and stores the result in another pointer array "revout".
+3. Calling the function "interpImg", which carries out the interpolation and stores the result in another pointer array "revout".
 4. Writing to the output file (row by row).
-5. Close all files.
+5. Closing all files.
 
-#### Refer to "ImageInterp.txt" for the full code
+#### Refer to "ImageInterp.c" for the full code
 
 #### References:
 
@@ -43,7 +43,7 @@ Codes for reading raw images -
 Before running the code in CCS, ***profiling*** is added to measure the time taken for running the "interpImg" function. 
 The header file "<c6x.h>" is included and the 64 bit TSC register (timer) is initialized before calling "interpImg", and ended afterwards. "sumcycles" stores the total cycles taken. 
 
-#### Refer to "ImageInterpCCS.txt" for the full code
+#### Refer to "ImageInterpCCS.c" for the full code
 
 ### Step 2.2 - Further Optimization of the Code
 
@@ -56,7 +56,7 @@ The intrinsics functions used for Image Interpolation include -
 Details on C66x intrinsics are available at Texas Instruments' TMS320C6000 Programmer's Guide - 
 - https://www.ti.com/lit/ug/spru198k/spru198k.pdf
 
-#### Refer to "ImageInterpOptimized.txt" for the full code
+#### Refer to "ImageInterpOptimized.c" for the full code
 
 ### Optimization Cycles:
 
